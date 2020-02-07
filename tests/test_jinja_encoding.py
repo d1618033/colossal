@@ -2,7 +2,7 @@ import pytest
 from .utils import load_example_module
 
 
-@pytest.mark.parametrize("var", ["1"])
+@pytest.mark.parametrize("var", ["1", "0"])
 def test_if_else(monkeypatch, var):
     monkeypatch.setenv("EXAMPLE_VAR", var)
     mod = load_example_module("ifelse")

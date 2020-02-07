@@ -7,6 +7,7 @@ authors = ["d1618033 <d1618033@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.6"
 jinja2 = "^2.11.1"
+astor = "^0.8.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.7.9"

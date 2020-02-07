@@ -1,6 +1,6 @@
 import pytest
 import importlib
-import colossal.jinja_encoding  # noqa
+import colossal  # noqa
 
 
 def _load_example_module(name):

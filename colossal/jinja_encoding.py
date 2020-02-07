@@ -11,7 +11,12 @@ def encode(input):
 def decode(input):
     code_string = codecs.decode(input)
     code_string = code_string + "\n"
-    template = jinja2.Template(code_string, block_start_string="# {%")
+    template = jinja2.Template(
+        code_string,
+        block_start_string="# {%",
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
     context = os.environ
     rendered = template.render(**context)
     for i, line in enumerate(rendered.splitlines()):

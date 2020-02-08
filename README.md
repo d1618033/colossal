@@ -68,3 +68,8 @@ Defined macros:
 
 * `dict@(x, y, z)` which expands to `dict(x=x, y=y, z=z)`
 
+# Caveats
+
+* You will need to import colossal before importing any module containing macros/templates.
+* In order to force rerendering of templates you will neeed to delete the appropriate `.pyc` file in the `__pycache__` folder.
+ 

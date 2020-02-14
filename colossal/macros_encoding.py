@@ -26,7 +26,6 @@ def decode(input):
     return astor.to_source(new_tree), len(input)
 
 
-@codecs.register
 def search_function(name):
     if name == "macro":
         return codecs.CodecInfo(encode=encode, decode=decode)

@@ -24,7 +24,6 @@ def decode(input):
     return rendered, len(input)
 
 
-@codecs.register
 def search_function(name):
     if name == "jinja2":
         return codecs.CodecInfo(encode=encode, decode=decode)

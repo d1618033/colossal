@@ -3,6 +3,22 @@ Colossal
 
 Larger than life (colossal) macros for python!
 
+
+## Installation
+
+```pip install colossal```
+
+You can either register the macros globally, by running:
+
+```register_colossal```
+
+or you can register them on demand by running the following before importing a module containing macros.
+
+```python
+import colossal
+colossal.register()
+```
+
 ## Usage
 
 ### Jinja Templates

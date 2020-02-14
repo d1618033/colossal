@@ -1,4 +1,3 @@
-import pytest
 import textwrap
 from colossal.macros_encoding import decode
 from .utils import load_example_module
@@ -15,13 +14,10 @@ def test_macro():
         y = 2
         z = 3
         dict@(x,y,z)
-        """
-    ).encode())
+    """).encode())
     assert decoded.strip() == textwrap.dedent("""
         x = 1
         y = 2
         z = 3
         dict(x=x, y=y, z=z)
-        """
-    ).strip()
-
+    """).strip()

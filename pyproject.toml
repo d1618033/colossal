@@ -18,7 +18,3 @@ mypy = "^0.761"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
-
-
-[tool.poetry.scripts]
-register_colossal = "colossal.register_global:main"

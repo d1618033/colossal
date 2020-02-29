@@ -65,9 +65,9 @@ You can also use jinja templating to render certain parts of code in development
 
 ```
 # -*- coding: jinja2 -*-
-{% if DEBUG %}
+# {% if DEBUG %}
 import pdb; pdb.set_trace()
-{% endif %}
+# {% endif %}
 ```
 
 The above code will be rendered only when the env variable `DEBUG` is set, in which case it will be rendered as:
@@ -86,6 +86,6 @@ Defined macros:
 
 # Caveats
 
-* You will need to import colossal before importing any module containing macros/templates.
+* You will need to register colossal before importing any module containing macros/templates.
 * In order to force rerendering of templates you will neeed to delete the appropriate `.pyc` file in the `__pycache__` folder.
  

@@ -26,3 +26,7 @@ def get_site_packages():
 def main():
     with open(os.path.join(get_site_packages(), 'colossal.pth'), 'w') as f:
         f.write(f"import sys; exec({REGISTRATION_CODE!r})\n")
+
+
+if __name__ == '__main__':
+    main()

@@ -10,7 +10,7 @@ Larger than life (colossal) macros for python!
 
 You can either register the macros globally, by running:
 
-```register_colossal```
+```python -m colossal.register_global```
 
 or you can register them on demand by running the following before importing a module containing macros.
 

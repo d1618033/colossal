@@ -18,9 +18,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install poetry twine
     - name: Build and publish
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        poetry build
-        twine upload dist/*
+      uses: d1618033/gh-action-python-publish-using-poetry@master
+      with:
+        pypi_username: ${{ secrets.PYPI_USERNAME }}
+        pypi_password: ${{ secrets.PYPI_PASSWORD }}
